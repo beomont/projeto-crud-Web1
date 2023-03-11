@@ -44,7 +44,7 @@ public class NoticiaDAO {
     public void atualizar(Noticia noticia) {
         for (int i = 0; i < noticias.size(); i++) {
             Noticia not = noticias.get(i);
-            if (not.getId() == not.getId()) {
+            if (not.getId() == noticia.getId()) {
                 noticias.set(i, noticia);
                 salvarJson();
                 break;
