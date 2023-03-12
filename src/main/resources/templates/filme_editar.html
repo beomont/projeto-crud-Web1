@@ -19,13 +19,13 @@
     <input class="form-control" style="width: 456px" type="text" id="genero" name="genero" th:field="*{genero}"/>
     <br>
     <label for="duracao">Duração(minutos):</label>
-    <input class="form-control" style="width: 456px" type="text" id="duracao" name="duracao" th:field="*{duracao}"/>
+    <input min="0" oninput="this.value = Math.abs(this.value)" class="form-control" style="width: 456px" type="number" id="duracao" name="duracao" th:field="*{duracao}"/>
     <br>
     <label for="sinopse">Sinopse:</label>
     <textarea class="form-control" style="width: 456px" rows="3" type="text" id="sinopse" name="sinopse" th:field="*{sinopse}"></textarea>
     <br>
     <label for="imdb">Nota IMDB:</label>
-    <input class="form-control" style="width: 456px" type="text" id="imdb" name="imdb" th:field="*{imdb}"/>
+    <input in="0" max="10" oninput="this.value = Math.abs(this.value)" class="form-control" style="width: 456px" type="number" id="imdb" name="imdb" th:field="*{imdb}"/>
     <br>
     <label for="imagem">Imagem:</label>
     <input class="form-control" style="width: 456px" type="text" id="imagem" name="imagem" th:field="*{imagem}"/>
