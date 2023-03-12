@@ -96,9 +96,11 @@ public class FilmeDAO {
         for (int i = 0; i < filmes.size(); i++) {
             Filme film = filmes.get(i);
             if (film.getId() == id) {
-                film.setLike(film.getLike() - 1);
-                salvarJson();
-                break;
+                if(film.getLike() > 0) {
+                    film.setLike(film.getLike() - 1);
+                    salvarJson();
+                    break;
+                }
             }
         }
     }
